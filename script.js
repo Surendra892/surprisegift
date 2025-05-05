@@ -24,16 +24,32 @@ function validateUser() {
   }
 }
 
+let choklate=''
+
+function getPrompt(){
+  choklate= prompt("Mana favorite choklate: ");
+  getVideo()
+}
+
 function inkaKavali() {
-  const choklate = prompt("Mana favorite choklate: ");
+  getPrompt();
+}
+function getVideo(){
   if (choklate.toLowerCase() == "snikers") {
     document.getElementById("myVideo").style.display = "block";
+    return;
   } else if (choklate.toLowerCase() == "snickers") {
     alert("Spelling chudu..!!, question lo chudu baga");
-  }else{
-    alert("cheppu, marchipova enti?")
+    getPrompt();
+    return;
+  }
+  if(choklate=='' || choklate==null){
+    alert("cheppu, marchipova enti?");
+    getPrompt()
+    return;
   }
 }
+
 
 const container = document.querySelector(".image-container");
 
