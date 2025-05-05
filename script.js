@@ -18,7 +18,7 @@ function validateUser() {
     setTimeout(() => {
       alert("Kindha Chudu Daling bottom right korner.");
       document.getElementById("inkaKavalBtn").style.display = "block";
-    }, 6000);
+    }, 8000);
   } else {
     alert("correct name and pin enter chey madam");
     document.getElementById("getInput").value = "";
@@ -41,7 +41,7 @@ function getVideo(){
     document.getElementById("myVideo").style.display = "block";
     document.getElementById("inkaKavalBtn").style.display = "none";
     return;
-  }else if (choklate == "snickers" || choklate=="snicker") {
+  }else if (choklate == "snickers" || choklate=="snicker" ||choklate=="sniker") {
     alert("Spelling chudu..!!, question lo chudu baga");
     getPrompt();
     return;
