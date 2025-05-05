@@ -57,7 +57,7 @@ const container = document.querySelector(".image-container");
 
 function createImage() {
   const img = document.createElement("img");
-  img.src = `images/img${Math.floor(Math.random() * 13) + 1}.jpg`;
+  img.src = `images/img${Math.floor(Math.random() * 14) + 1}.jpg`;
   img.style.left = "50%";
   img.style.bottom = "40px";
   img.classList.add("heart-shaped");
