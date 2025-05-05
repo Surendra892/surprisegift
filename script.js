@@ -30,6 +30,8 @@ function inkaKavali() {
     document.getElementById("myVideo").style.display = "block";
   } else if (choklate.toLowerCase() == "snickers") {
     alert("Spelling chudu..!!, question lo chudu baga");
+  }else{
+    alert("cheppu, marchipova enti?")
   }
 }
 
