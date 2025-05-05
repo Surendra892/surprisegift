@@ -3,7 +3,7 @@
     margin: 0;
     background: url('images/red-heart.avif') no-repeat center center fixed;
     background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
     height: 100vh;
     display: none;
     align-items: flex-end;
