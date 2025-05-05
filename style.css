@@ -1,0 +1,84 @@
+
+#main {
+    margin: 0;
+    background: url('/images/red-heart.avif') no-repeat center center fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+    height: 100vh;
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+#validationBlock{
+    margin: 0;
+    background: url('/images/welcome-bg.jpg') no-repeat center center fixed;
+    background-size:cover;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#myVideo {
+    display: none;
+    position: fixed;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9998;
+    cursor: pointer;
+    background-color: transparent;
+}
+#inkaKavalBtn{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right:0%;
+    z-index: 99999;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border-color: whitesmoke;
+}
+.fountain-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-container img {
+    position: absolute;
+    width: 105px;
+    height: 115px;
+    pointer-events: none;
+    border-radius: 30% 30% 65% 65%;
+    z-index: 1;
+}
+
+.heart-shaped {
+    width: 180px;
+    height: 190px;
+    object-fit: cover;
+    clip-path: polygon(
+        50% 100%,
+        8% 60%,
+        -10% 15%,
+        30% -15%,
+        50% 8%,
+        75% -20%,
+        110% 20%,
+        90% 60%
+    );
+}
+#btn-welcome{
+    margin-top: 5%;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
