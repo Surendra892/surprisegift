@@ -107,7 +107,7 @@ input{
     }
 
     video#myVideo {
-        bottom: 0;
+        bottom:5px;
     }
 
 }

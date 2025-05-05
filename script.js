@@ -1,3 +1,4 @@
+
 function validateUser() {
   let val = document.getElementById("getInput").value;
   if (val == "" || val == null) {
@@ -17,7 +18,7 @@ function validateUser() {
     setTimeout(() => {
       alert("Kindha Chudu Daling bottom right korner.");
       document.getElementById("inkaKavalBtn").style.display = "block";
-    }, 7000);
+    }, 6000);
   } else {
     alert("correct name and pin enter chey madam");
     document.getElementById("getInput").value = "";
@@ -27,7 +28,7 @@ function validateUser() {
 let choklate=''
 
 function getPrompt(){
-  choklate= prompt("Mana favorite choklate: ");
+  choklate= prompt("Mana favorite choklate: ").toLowerCase();
   getVideo()
 }
 
@@ -35,15 +36,16 @@ function inkaKavali() {
   getPrompt();
 }
 function getVideo(){
-  if (choklate.toLowerCase() == "snikers") {
+
+  if (choklate == "snikers") {
     document.getElementById("myVideo").style.display = "block";
+    document.getElementById("inkaKavalBtn").style.display = "none";
     return;
-  } else if (choklate.toLowerCase() == "snickers") {
+  }else if (choklate == "snickers") {
     alert("Spelling chudu..!!, question lo chudu baga");
     getPrompt();
     return;
-  }
-  if(choklate=='' || choklate==null){
+  }else if(choklate=='' || choklate==null){
     alert("cheppu, marchipova enti?");
     getPrompt()
     return;
