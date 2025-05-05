@@ -1,7 +1,7 @@
 
 #main {
     margin: 0;
-    background: url('/images/red-heart.avif') no-repeat center center fixed;
+    background: url('images/red-heart.avif') no-repeat center center fixed;
     background-size: cover;
     /* overflow: hidden; */
     height: 100vh;
