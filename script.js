@@ -41,7 +41,7 @@ function getVideo(){
     document.getElementById("myVideo").style.display = "block";
     document.getElementById("inkaKavalBtn").style.display = "none";
     return;
-  }else if (choklate == "snickers") {
+  }else if (choklate == "snickers" || choklate=="snicker") {
     alert("Spelling chudu..!!, question lo chudu baga");
     getPrompt();
     return;
@@ -49,6 +49,9 @@ function getVideo(){
     alert("cheppu, marchipova enti?");
     getPrompt()
     return;
+  }else{
+    alert("try again...");
+    getPrompt()
   }
 }
 
