@@ -82,3 +82,32 @@ input{
     outline: none;
 }
 
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-content {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    #btn-welcome {
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    #inkaKavalBtn {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    /* video#myVideo {
+        width: 90vw;
+        height: auto;
+    } */
+}
