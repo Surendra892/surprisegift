@@ -17,7 +17,7 @@ function validateUser() {
     setTimeout(() => {
       alert("Kindha Chudu Daling bottom right korner.");
       document.getElementById("inkaKavalBtn").style.display = "block";
-    }, 1000);
+    }, 6000);
   } else {
     alert("correct name and pin enter chey madam");
     document.getElementById("getInput").value = "";
@@ -51,7 +51,7 @@ function getVideo() {
     choklate == "fivestar"
   ) {
     myVideo.style.display = "block";
-    myVideo.innerHTML = ` <video id="fiveStarVideo" width="320" height="240" poster="images/img14.jpg" controls  oncontextmenu="return false;">
+    myVideo.innerHTML = ` <video id="fiveStarVideo" width="320" height="240" poster="images/thumbnail.jpg" controls  oncontextmenu="return false;">
             <source src="video/project_m8813.mp4" type="video/mp4">
         </video>`;
     document.getElementById("inkaKavalBtn").innerHTML = "Inko Choklate";
