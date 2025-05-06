@@ -1,4 +1,3 @@
-
 function validateUser() {
   let val = document.getElementById("getInput").value;
   if (val == "" || val == null) {
@@ -18,43 +17,62 @@ function validateUser() {
     setTimeout(() => {
       alert("Kindha Chudu Daling bottom right korner.");
       document.getElementById("inkaKavalBtn").style.display = "block";
-    }, 8000);
+    }, 1000);
   } else {
     alert("correct name and pin enter chey madam");
     document.getElementById("getInput").value = "";
   }
 }
 
-let choklate=''
+let choklate = "";
 
-function getPrompt(){
-  choklate= prompt("Mana favorite choklate: ").toLowerCase();
-  getVideo()
+function getPrompt() {
+  choklate = prompt("Mana favorite choklate: ");
+  choklate = choklate ? choklate.toLowerCase() : "";
+  getVideo();
 }
 
 function inkaKavali() {
   getPrompt();
 }
-function getVideo(){
+function getVideo() {
+  const myVideo = document.getElementById("myVideo");
 
   if (choklate == "snikers") {
-    document.getElementById("myVideo").style.display = "block";
-    document.getElementById("inkaKavalBtn").style.display = "none";
+    myVideo.style.display = "block";
+    myVideo.innerHTML = ` <video id="snikersVideo" width="320" height="240" poster="images/img14.jpg" controls  oncontextmenu="return false;">
+            <source src="video/surprise.mp4" type="video/mp4">
+        </video>`;
+    document.getElementById("inkaKavalBtn").innerHTML = "Inko Choklate";
     return;
-  }else if (choklate == "snickers" || choklate=="snicker" ||choklate=="sniker") {
+  } else if (
+    choklate == "5star" ||
+    choklate == "five star" ||
+    choklate == "fivestar"
+  ) {
+    myVideo.style.display = "block";
+    myVideo.innerHTML = ` <video id="fiveStarVideo" width="320" height="240" poster="images/img14.jpg" controls  oncontextmenu="return false;">
+            <source src="video/project_m8813.mp4" type="video/mp4">
+        </video>`;
+    document.getElementById("inkaKavalBtn").innerHTML = "Inko Choklate";
+    return;
+  } else if (
+    choklate == "snickers" ||
+    choklate == "snicker" ||
+    choklate == "sniker"
+  ) {
     alert("Spelling chudu..!!, question lo chudu baga");
     getPrompt();
     return;
-  }else if(choklate=='' || choklate==null){
+  } else if (choklate == "" || choklate == null) {
     alert("cheppu, marchipova enti?");
-    getPrompt()
+    getPrompt();
     return;
-  }else{
+  } else {
     alert("try again...");
-    getPrompt()
+    getPrompt();
   }
 }
-
 
 const container = document.querySelector(".image-container");
 

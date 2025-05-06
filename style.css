@@ -106,7 +106,7 @@ input{
         padding: 8px 12px;
     }
 
-    video#myVideo {
+    #myVideo {
         bottom:5px;
     }
 
