@@ -5,7 +5,7 @@
     background-size: cover;
     overflow: hidden;
     height: 100vh;
-    display: none;
+    display: block;
     align-items: flex-end;
     justify-content: center;
     position: relative;
@@ -50,10 +50,10 @@
 
 .image-container img {
     position: absolute;
-    width: 105px;
-    height: 115px;
+    width: 125px;
+    height: 135px;
     pointer-events: none;
-    border-radius: 30% 30% 65% 65%;
+    border-radius: 35% 35% 0 0;
     z-index: 1;
 }
 

@@ -1,15 +1,16 @@
+var initalVal;
 function validateUser() {
-  let val = document.getElementById("getInput").value;
-  if (val == "" || val == null) {
+  initalVal = document.getElementById("getInput").value;
+  if (initalVal == "" || initalVal == null) {
     alert("Oye name and pin enter chey..");
     return;
   }
-  val = val.toLowerCase();
+  initalVal = initalVal.toLowerCase();
   if (
-    val == "maha8813" ||
-    val == "maha 8813" ||
-    val == "8813maha" ||
-    val == "8813 maha"
+    initalVal == "maha8813" ||
+    initalVal == "maha 8813" ||
+    initalVal == "8813maha" ||
+    initalVal == "8813 maha"
   ) {
     document.getElementById("validationBlock").style.display = "none";
     document.getElementById("main").style.display = "block";
@@ -76,7 +77,7 @@ function getVideo() {
 
 const container = document.querySelector(".image-container");
 
-function createImage() {
+function createImageOne() {
   const img = document.createElement("img");
   img.src = `images/img${Math.floor(Math.random() * 14) + 1}.jpg`;
   img.style.left = "50%";
@@ -85,7 +86,7 @@ function createImage() {
   container.appendChild(img);
 
   const angle = Math.random() * 1 * Math.PI;
-  const distance = window.innerWidth * 0.8 + Math.random() * 200; // reach farther
+  const distance = window.innerWidth * 1 + Math.random() * 1000; // reach farther
   const x = Math.cos(angle) * distance;
   const y = Math.sin(angle) * distance + window.innerHeight * 0.5;
 
@@ -95,7 +96,7 @@ function createImage() {
       { transform: `translate(calc(-50% + ${x}px), -${y}px)`, opacity: 0.3 },
     ],
     {
-      duration: 10000,
+      duration: 18000,
       easing: "ease-out",
     }
   );
@@ -103,10 +104,52 @@ function createImage() {
   setTimeout(() => img.remove(), 4000);
 }
 
-// Emit more images simultaneously
+
+function createImageTwo() {
+  const img = document.createElement("img");
+  img.src = `images/img${Math.floor(Math.random() * 14) + 1}.jpg`;
+
+  img.classList.add("heart-shaped");
+  img.style.position = "absolute";
+
+  // Random position along full width
+  const randomLeft = Math.random() * window.innerWidth;
+  img.style.left = `${randomLeft}px`;
+  img.style.bottom = "0px";
+
+  container.appendChild(img);
+
+  const angle = Math.random() * Math.PI;
+  const distance = window.innerWidth + Math.random() * 400;
+  const x = Math.cos(angle) * distance;
+  const y = Math.sin(angle) * distance + window.innerHeight * 0.5;
+
+  img.animate(
+    [
+      { transform: "translate(0, 0)", opacity: 1 },
+      { transform: `translate(${x}px, -${y}px)`, opacity: 0 },
+    ],
+    {
+      duration: 18000,
+      easing: "ease-out",
+    }
+  );
+
+  setTimeout(() => img.remove(), 10000); // match animation duration
+}
+
+
+
 setInterval(() => {
-  for (let i = 0; i < 5; i++) {
-    createImage();
+  if (initalVal == 'maha8813') {
+    for (let i = 0; i < 5; i++) {
+      createImageTwo();
+    }
+  }
+  if (initalVal == 'maha 8813') {
+    for (let i = 0; i < 5; i++) {
+      createImageOne();
+    }
   }
 }, 400);
 
