@@ -1,6 +1,6 @@
-var initalVal;
+
 function validateUser() {
-  initalVal = document.getElementById("getInput").value;
+  let initalVal = document.getElementById("getInput").value;
   if (initalVal == "" || initalVal == null) {
     alert("Oye name and pin enter chey..");
     return;
@@ -77,7 +77,7 @@ function getVideo() {
 
 const container = document.querySelector(".image-container");
 
-function createImageOne() {
+function createImage() {
   const img = document.createElement("img");
   img.src = `images/img${Math.floor(Math.random() * 14) + 1}.jpg`;
   img.style.left = "50%";
@@ -104,53 +104,10 @@ function createImageOne() {
   setTimeout(() => img.remove(), 4000);
 }
 
-
-function createImageTwo() {
-  const img = document.createElement("img");
-  img.src = `images/img${Math.floor(Math.random() * 14) + 1}.jpg`;
-
-  img.classList.add("heart-shaped");
-  img.style.position = "absolute";
-
-  // Random position along full width
-  const randomLeft = Math.random() * window.innerWidth;
-  img.style.left = `${randomLeft}px`;
-  img.style.bottom = "0px";
-
-  container.appendChild(img);
-
-  const angle = Math.random() * Math.PI;
-  const distance = window.innerWidth + Math.random() * 400;
-  const x = Math.cos(angle) * distance;
-  const y = Math.sin(angle) * distance + window.innerHeight * 0.5;
-
-  img.animate(
-    [
-      { transform: "translate(0, 0)", opacity: 1 },
-      { transform: `translate(${x}px, -${y}px)`, opacity: 0 },
-    ],
-    {
-      duration: 18000,
-      easing: "ease-out",
-    }
-  );
-
-  setTimeout(() => img.remove(), 10000); // match animation duration
-}
-
-
-
 setInterval(() => {
-  if (initalVal == 'maha8813') {
-    for (let i = 0; i < 5; i++) {
-      createImageTwo();
+     for (let i = 0; i < 5; i++) {
+      createImage();
     }
-  }
-  if (initalVal == 'maha 8813') {
-    for (let i = 0; i < 5; i++) {
-      createImageOne();
-    }
-  }
 }, 400);
 
 function forgotPINAlert() {
